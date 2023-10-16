@@ -1,0 +1,18 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Car Crashes By Time" },
+    "width":250,
+    "background":"rgb(226 232 240)",
+    "data": {
+        "values": [
+          {"Time": "Day", "Crashes": 8460}, {"Time": "Night", "Crashes": 6108}
+          
+        ]
+      },
+      "mark": "arc",
+      "encoding": {
+        "theta": {"field": "Crashes", "type": "quantitative"},
+        "color": {"field": "Time", "type": "nominal","scale": {"range": ["red", "black"]}}
+      }
+        
+}

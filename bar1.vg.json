@@ -1,0 +1,19 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Car Crashes By Day" },
+    "width":860,
+    
+    "data": {
+        "values": [
+          {"Day": "Sunday", "Crashes": 8460}, {"Day": "Monday", "Crashes": 6108},{"Day": "Tuesday", "Crashes": 6145}, {"Day": "Wednesday", "Crashes": 6663},
+          {"Day": "Thursday", "Crashes": 7106}, {"Day": "Friday", "Crashes": 8665}, {"Day": "Saturday", "Crashes": 9696}
+          
+        ]
+      },
+      "mark": "bar",
+      "encoding": {
+        "y": {"field": "Day", "type": "nominal", "axis": {"labelAngle": 0},"sort":{"order":null}},
+        "x": {"field": "Crashes", "type": "quantitative"},
+        "color": {"value": "Black"}
+        }
+}

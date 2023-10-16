@@ -1,0 +1,20 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Car Crashes By Month" },
+    "width":250,
+    "background":"rgb(226 232 240)",
+    "data": {
+        "values": [
+          {"Month": "Jan", "Crashes": 4329}, {"Month": "Feb", "Crashes": 3975},{"Month": "Mar", "Crashes": 4673}, {"Month": "Apr", "Crashes": 4298},
+          {"Month": "May", "Crashes": 4447}, {"Month": "Jun", "Crashes": 4333}, {"Month": "Jul", "Crashes": 4321},{"Month": "Aug", "Crashes": 4512}, 
+          {"Month": "Sep", "Crashes": 4337}, {"Month": "Oct", "Crashes": 4509},{"Month": "Nov", "Crashes": 4388},{"Month": "Dec", "Crashes": 4721}
+          
+        ]
+      },
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "Month", "type": "nominal", "axis": {"labelAngle": 0},"sort":{"order":null}},
+        "y": {"field": "Crashes", "type": "quantitative"},
+        "color": {"value": "Black"}
+        }
+}

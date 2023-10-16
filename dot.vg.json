@@ -1,0 +1,45 @@
+{
+    "title": { "text": "Most At Risk Road User By State And Age" },
+    "data": { "url": "https://raw.githubusercontent.com/josh131008/FIT3179DataVisualisation2/master/Crash_Data.csv"},
+    "params": [
+      {
+      "name": "Year",
+      "bind": {
+      "input": "select",
+      "options": [
+      null,
+      "2021",
+      "2016",
+      "2011",
+      "2006",
+      "2001",
+      "1996"
+      ],
+      "labels":[
+      "Show All",
+      "2021",
+      "2016",
+      "2011",
+      "2006",
+      "2001",
+      "1996"
+      ],
+      "name": "Year: "
+      }
+      }
+      ],
+
+      "transform": [
+        {"filter": "datum.Age > 0"},
+        {
+        "filter": "Year == null || datum.Year == Year"}
+        ],
+    "mark": "point",
+    "background":"rgb(226 232 240)",
+    "width": 725,
+    "encoding": {
+      "x": {"field": "Age", "type": "quantitative"},
+      "y": {"field": "State", "type": "Nominal"},
+      "color": {"field": "Road User", "type": "Nominal"}
+    }
+  }
